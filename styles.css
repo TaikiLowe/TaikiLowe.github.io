@@ -133,27 +133,32 @@ a{
 
 /* Text animation starts here */
 #container {
-  color:black;
-  text-transform:uppercase;
-  font-size:36px;
-  font-weight:bold;
-  padding-top:5px;  
-  width:100%;
-  bottom:45%;
+  color: black;
+  text-transform: uppercase;
+  font-size: clamp(24px, 5vw, 36px); /* Scales smoothly between mobile and desktop */
+  font-weight: bold;
+  padding-top: 5px;  
+  width: 100%;
 }
 
 #flip {
-  height:50px;
-  overflow:hidden;
+  height: 50px;
+  overflow: hidden;
+}
+
+/* Target the wrapper divs inside #flip */
+#flip > div {
+  height: 50px;
 }
 
 #flip > div > div {
-  
-  color:#fff;
-  padding:0px 12px;
-  height:45px;
-  margin-bottom:45px;
-  display:inline-block;
+  color: #fff;
+  padding: 0px 12px;
+  height: 45px;
+  line-height: 45px; /* Centers text vertically */
+  display: inline-block;
+  background: #4ec7f3;
+  white-space: nowrap; /* Prevents long phrases from breaking into two lines on mobile */
 }
 
 #flip div:first-child {
