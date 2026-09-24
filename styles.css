@@ -129,5 +129,20 @@ a{
   navigation: auto;
 }
 
+/* image fix */ 
+
+img {
+  /* 1. Fixes horizontal scrolling: limits width to 100% of the mobile screen */
+  max-width: 100%;
+  width: 100%;
+
+  /* 2. Fixes stretching: forces the image to keep its original proportions */
+  height: auto;
+  
+  /* 3. Cleanup: prevents small layout gaps beneath the image */
+  display: block; 
+}
+
+
 
 
