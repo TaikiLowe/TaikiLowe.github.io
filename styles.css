@@ -27,18 +27,24 @@ a{
     margin-inline:auto;
 } 
 .flex-container {
-  display: flex;         /* Places image and text side-by-side */
-  align-items: center;   /* Vertically centers the text next to the image */
-  gap: 20px;             /* Adds clean spacing between the image and text */
+  display: flex;         
+  align-items: center;   
+  gap: 20px;             
+  flex-wrap: wrap;       /* FIX 1: Allows images to stack vertically on mobile */
 }
+
 .flex-container img {
-  max-width: 100%;    /* Makes sure the image doesn't overflow */
-  height: auto;
+  max-width: 100%;    
+  height: auto;          /* FIX 2: Maintains proper aspect ratio */
+  flex: 1 1 200px;       /* FIX 3: Allows images to grow/shrink intelligently, setting a 200px base */
+  object-fit: contain;   /* FIX 4: Safety net to prevent any accidental stretching */
 }
+
 .aligned-image {
-  max-width: 200px;      /* Keeps the image at a controlled size */
-  height: auto;          /* Maintains the aspect ratio */
+  max-width: 200px;      
+  height: auto;          
 }
+
 .site-header{
     background-color: aliceblue;height:88px;padding:0 max(40px,calc((100vw - 1120px)/2));display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);font-size:13px
 } 
