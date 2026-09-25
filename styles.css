@@ -47,6 +47,13 @@ a{
   margin: 0 auto;     /* Centers the image horizontally if the screen is wider than 800px */
 }
 
+.responsive-flex {
+  display: inline-block;
+  max-width: 100%;    
+  height: auto;       
+  margin: 0 auto;
+}
+
 .site-header{
     background-color: aliceblue;height:88px;padding:0 max(40px,calc((100vw - 1120px)/2));display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);font-size:13px
 } 
