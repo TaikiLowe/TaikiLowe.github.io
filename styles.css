@@ -48,7 +48,7 @@ a{
 }
 
 .responsive-flex {
-  display: inline-block;
+  display: inline;
   max-width: 100%;    
   height: auto;       
   margin: 0 auto;
