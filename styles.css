@@ -19,6 +19,11 @@ body{
     color:var(--ink);
     font-family:Manrope,Arial,sans-serif; 
 }
+.finisher-header {
+  align-items: center;
+  width:min(1120px,calc(100% - 80px)); 
+  margin-inline:auto;
+}
 h1{
     font-family:"Garamond",Times,serif;
 } 
