@@ -23,6 +23,10 @@ body{
   align-items: center;
   width: 100vw !important; /* Forces width to match 100% of the viewport width */ 
   margin-inline:auto;
+    /* Force mobile GPU rendering to stabilize layout shifts */
+  transform: translateZ(0);
+  will-change: transform;
+  overflow: hidden;
 }
 h1{
     font-family:"Garamond",Times,serif;
