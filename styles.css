@@ -93,7 +93,10 @@ a{
     .intro{
       max-width:735px;font-size:18px;line-height:1.6;color:var(--muted);margin-bottom:38px;margin-top:38px
     }
-    .text-link,.contact-email{
+    .text-link{
+        display:inline-flex;gap:12px;align-items:center;border-bottom:1px solid var(--paper);padding-bottom:6px;font-size:14px;font-weight:600
+    }
+    .contact-email{
       display:inline-flex;gap:12px;align-items:center;border-bottom:1px solid var(--ink);padding-bottom:6px;font-size:14px;font-weight:600
     }
     .text-link span,.contact-email span{font-size:18px}
