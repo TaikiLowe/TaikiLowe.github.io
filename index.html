@@ -7,6 +7,17 @@
     <title>Taiki Lowe — Product Designer</title>
     <link rel="icon" type="image/x-icon" sizes="32x32" href="Fixed TL.ico">
     <link rel="stylesheet" href="styles.css" />
+        <style> 
+      .cycler-container {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .highlight {
+            color: #00ffff;
+            transition: opacity 0.3s ease;
+        }
+    </style>
   </head>
   <body>
     <header class="site-header"><a class="wordmark" href="index.html">
@@ -24,7 +35,9 @@
         
           <img class="portrait" src="Taiki Headshot.jpg" alt="Taiki Lowe" />
             <h1 style="color: white">Hi, I'm Taiki</h1> 
-            <h2 style="color: white">UI/UX Designer • Frontend Developer • Language Enthusiast</h2>
+            <div class="cycler-container">
+        I'm a <span id="cycling-word" class="highlight">UI/UX Designer</span>
+      </div>
         <p style="color: white" class="intro">I'm a product designer and recent UC Davis graduate who is passionate about user-centered design. With a background in human cognition and linguistics, I bring curiosity about user behavior to every interaction—making products more intuitive, useful, and human.</p>
         <a style="color: white" class="text-link" href="#work">Explore selected work <span>↓</span></a>
         
@@ -99,5 +112,27 @@ headerInstance = new FinisherHeader({
     resizeTimeout = setTimeout(initHeader, 250);
   });
 </script>
+    <script>
+        // Array of words to cycle through
+        const words = ["UI/UX Designer", "Frontend Developer", "Language Enthusiast"];
+        let currentIndex = 0;
+        const wordElement = document.getElementById("cycling-word");
+
+        function cycleWords() {
+            // Fade out
+            wordElement.style.opacity = 0;
+            
+            setTimeout(() => {
+                // Change word
+                currentIndex = (currentIndex + 1) % words.length;
+                wordElement.textContent = words[currentIndex];
+                // Fade back in
+                wordElement.style.opacity = 1;
+            }, 300); // Matches transition time
+        }
+
+        // Change the word every 2 seconds (2000 milliseconds)
+        setInterval(cycleWords, 2000);
+    </script>
   </body>
 </html>
